@@ -80,7 +80,7 @@ export default {
 ```typescript
 import { EventBridge } from 'aws-sdk';
 import { FromSchema } from 'json-schema-to-ts';
-import schema from '../functions/hello/schema';
+import schema from '../../functions/hello/schema';
 
 const eventBridge = new EventBridge();
 
@@ -132,7 +132,7 @@ export const main = middyfy(hello);
 - In the `Event pattern` textarea add:
   ```json
   {
-      "detail-type": ["TRANSFORMED_MESSAGE"]
+      "detail-type": ["TRANSFORMED_MESSAGE"],
       "detail": {
           "target": ["YOUR_TEAM_NAME_HERE"]
       }
